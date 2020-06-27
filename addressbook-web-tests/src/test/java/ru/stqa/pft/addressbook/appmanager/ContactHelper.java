@@ -10,6 +10,7 @@ import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -75,24 +76,28 @@ public class ContactHelper extends HelperBase{
   public void create(ContactData contactData) {
     initContactCreation();
     fillContactForm(contactData, true);
+    contactCache = null;
     submitContactCreation();
   }
 
   public void modify(ContactData contact) {
     initModificationContactById(contact.getId());
     fillContactForm(contact, false);
+    contactCache = null;
     submitContactModification();
   }
 
   public void delete(int index){
     selectContact(index);
     deleteSelectedContact();
+    contactCache = null;
     wd.switchTo().alert().accept();
   }
 
   public void delete(ContactData contact) {
     selectContactById(contact.getId());
     deleteSelectedContact();
+    contactCache = null;
     wd.switchTo().alert().accept();
   }
 
@@ -112,16 +117,22 @@ public class ContactHelper extends HelperBase{
     return contacts;
   }
 
+  private Contacts contactCache = null;
+
   public Contacts all() {
-    Contacts contacts = new Contacts();
+    if (contactCache != null) {
+      return new Contacts(contactCache);
+    }
+
+    Contacts contactCache = new Contacts();
     List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=entry]"));
     for (WebElement element : elements){
       String firstname = element.findElements(By.cssSelector("td")).get(2).getText();
       String lastname  = element.findElements(By.cssSelector("td")).get(1).getText();
       int id = Integer.parseInt(element.findElement(By.name("selected[]")).getAttribute("value"));
-      contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
+      contactCache.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
     }
-    return contacts;
+    return contactCache;
   }
 
 }
