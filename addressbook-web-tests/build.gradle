@@ -9,6 +9,7 @@ dependencies {
     //implementation 'org.seleniumhq.selenium:selenium-java:2.53.1'
     //implementation 'org.seleniumhq.selenium:selenium-java:2.48.2'
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-5'
+    implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
 }
 
 test {
