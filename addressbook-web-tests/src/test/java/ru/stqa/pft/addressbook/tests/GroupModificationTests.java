@@ -32,20 +32,10 @@ public class GroupModificationTests extends TestBase {
     //int index = before.size() - 1;
     GroupData group = new GroupData()
             .withId(modifiedGroup.getId()).withName("test11").withHeader("test12").withFooter("test13");
-
     app.group().modify(group);
-
+    assertThat(app.group().count(),equalTo(before.size()));
     Groups after = app.group().all();
-    Assert.assertEquals(after.size(),before.size());
-
-    //before.remove(modifiedGroup);
-    //before.add(group);
-    // Comparator<? super GroupData> byId = (g1,g2) -> Integer.compare(g1.getId(), g2.getId());
-    // before.sort(byId);
-    // after.sort(byId);
-    //Assert.assertEquals(before, after);
     assertThat(after, equalTo(before.without(modifiedGroup).withAdded(group)));
   }
-
 
 }
