@@ -2,26 +2,31 @@
   {
     "firstname": "test 00",
     "lastname": "test 000",
-    "homePhone": "777-777-770"
+    "nickname": "test 0000",
+    "homePhone": "777-777-770",
+    "company": "Test Company 0",
+    "address": "Test addres 1 / 200",
+    "email": "test0@test0.ru",
+    "group": "test1"
   },
   {
     "firstname": "test 01",
     "lastname": "test 001",
-    "homePhone": "777-777-771"
+    "nickname": "test 0001",
+    "homePhone": "777-777-771",
+    "company": "Test Company 1",
+    "address": "Test addres 2 / 201",
+    "email": "test0@test1.ru",
+    "group": "test1"
   },
   {
     "firstname": "test 02",
     "lastname": "test 002",
-    "homePhone": "777-777-772"
-  },
-  {
-    "firstname": "test 03",
-    "lastname": "test 003",
-    "homePhone": "777-777-773"
-  },
-  {
-    "firstname": "test 04",
-    "lastname": "test 004",
-    "homePhone": "777-777-774"
+    "nickname": "test 0002",
+    "homePhone": "777-777-772",
+    "company": "Test Company 2",
+    "address": "Test addres 3 / 202",
+    "email": "test0@test2.ru",
+    "group": "test1"
   }
 ]

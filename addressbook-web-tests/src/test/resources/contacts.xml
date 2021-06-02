@@ -1,62 +1,53 @@
 <list>
-  <ru.stqa.pft.addressbook.model.ContactData>
+  <contact>
     <firstname>test 00</firstname>
     <lastname>test 000</lastname>
+    <nickname>test 0000</nickname>
     <homePhone>777-777-770</homePhone>
     <workPhone></workPhone>
     <allPhones></allPhones>
     <mobilePhone></mobilePhone>
-    <email></email>
+    <company>Test Company 0</company>
+    <address>Test addres 1 / 200</address>
+    <email>test0@test0.ru</email>
     <email2></email2>
     <email3></email3>
     <allemails></allemails>
-  </ru.stqa.pft.addressbook.model.ContactData>
-  <ru.stqa.pft.addressbook.model.ContactData>
+    <group>test1</group>
+    <photo>src\test\resources\stru.png</photo>
+  </contact>
+  <contact>
     <firstname>test 01</firstname>
     <lastname>test 001</lastname>
+    <nickname>test 0001</nickname>
     <homePhone>777-777-771</homePhone>
     <workPhone></workPhone>
     <allPhones></allPhones>
     <mobilePhone></mobilePhone>
-    <email></email>
+    <company>Test Company 1</company>
+    <address>Test addres 2 / 201</address>
+    <email>test0@test1.ru</email>
     <email2></email2>
     <email3></email3>
     <allemails></allemails>
-  </ru.stqa.pft.addressbook.model.ContactData>
-  <ru.stqa.pft.addressbook.model.ContactData>
+    <group>test1</group>
+    <photo>src\test\resources\stru.png</photo>
+  </contact>
+  <contact>
     <firstname>test 02</firstname>
     <lastname>test 002</lastname>
+    <nickname>test 0002</nickname>
     <homePhone>777-777-772</homePhone>
     <workPhone></workPhone>
     <allPhones></allPhones>
     <mobilePhone></mobilePhone>
-    <email></email>
+    <company>Test Company 2</company>
+    <address>Test addres 3 / 202</address>
+    <email>test0@test2.ru</email>
     <email2></email2>
     <email3></email3>
     <allemails></allemails>
-  </ru.stqa.pft.addressbook.model.ContactData>
-  <ru.stqa.pft.addressbook.model.ContactData>
-    <firstname>test 03</firstname>
-    <lastname>test 003</lastname>
-    <homePhone>777-777-773</homePhone>
-    <workPhone></workPhone>
-    <allPhones></allPhones>
-    <mobilePhone></mobilePhone>
-    <email></email>
-    <email2></email2>
-    <email3></email3>
-    <allemails></allemails>
-  </ru.stqa.pft.addressbook.model.ContactData>
-  <ru.stqa.pft.addressbook.model.ContactData>
-    <firstname>test 04</firstname>
-    <lastname>test 004</lastname>
-    <homePhone>777-777-774</homePhone>
-    <workPhone></workPhone>
-    <allPhones></allPhones>
-    <mobilePhone></mobilePhone>
-    <email></email>
-    <email2></email2>
-    <email3></email3>
-    <allemails></allemails>
-  </ru.stqa.pft.addressbook.model.ContactData>
+    <group>test1</group>
+    <photo>src\test\resources\stru.png</photo>
+  </contact>
 </list>
