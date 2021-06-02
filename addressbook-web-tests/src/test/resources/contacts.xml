@@ -1,0 +1,62 @@
+<list>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>test 00</firstname>
+    <lastname>test 000</lastname>
+    <homePhone>777-777-770</homePhone>
+    <workPhone></workPhone>
+    <allPhones></allPhones>
+    <mobilePhone></mobilePhone>
+    <email></email>
+    <email2></email2>
+    <email3></email3>
+    <allemails></allemails>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>test 01</firstname>
+    <lastname>test 001</lastname>
+    <homePhone>777-777-771</homePhone>
+    <workPhone></workPhone>
+    <allPhones></allPhones>
+    <mobilePhone></mobilePhone>
+    <email></email>
+    <email2></email2>
+    <email3></email3>
+    <allemails></allemails>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>test 02</firstname>
+    <lastname>test 002</lastname>
+    <homePhone>777-777-772</homePhone>
+    <workPhone></workPhone>
+    <allPhones></allPhones>
+    <mobilePhone></mobilePhone>
+    <email></email>
+    <email2></email2>
+    <email3></email3>
+    <allemails></allemails>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>test 03</firstname>
+    <lastname>test 003</lastname>
+    <homePhone>777-777-773</homePhone>
+    <workPhone></workPhone>
+    <allPhones></allPhones>
+    <mobilePhone></mobilePhone>
+    <email></email>
+    <email2></email2>
+    <email3></email3>
+    <allemails></allemails>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>test 04</firstname>
+    <lastname>test 004</lastname>
+    <homePhone>777-777-774</homePhone>
+    <workPhone></workPhone>
+    <allPhones></allPhones>
+    <mobilePhone></mobilePhone>
+    <email></email>
+    <email2></email2>
+    <email3></email3>
+    <allemails></allemails>
+  </ru.stqa.pft.addressbook.model.ContactData>
+</list>

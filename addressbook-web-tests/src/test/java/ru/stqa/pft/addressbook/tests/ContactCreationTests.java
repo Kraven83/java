@@ -8,6 +8,7 @@ import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
 
+import java.io.File;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
@@ -24,8 +25,9 @@ public class ContactCreationTests extends TestBase {
   public void testContactCreation() {
     app.goTo().homePage();
     Contacts before = app.contact().all();
+    File photo = new File("src/test/resources/stru.png");
     ContactData contact = new ContactData().withFirstname("test10").withLastname("test20").withNickname("test3").withHomePhone("8-900-999-0000")
-            .withAddress("Test addres 0").withCompany("Test Company").withEmail("test0@test.ru").withGroup("test1");
+            .withAddress("Test addres 0").withCompany("Test Company").withEmail("test0@test.ru").withGroup("test1").withPhoto(photo);
 
     app.contact().create(contact);
     app.goTo().homePage();
@@ -34,7 +36,14 @@ public class ContactCreationTests extends TestBase {
     assertThat(after.size(), equalTo(before.size() + 1));
 
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+  }
 
-
+  @Test(enabled = false)
+  public void testCurrentDir() {
+    File currentDir = new File(".");
+    System.out.println(currentDir.getAbsolutePath());
+    File photo = new File("src/test/resources/stru.png");
+    System.out.println(photo.getAbsolutePath());
+    System.out.println(photo.exists());
   }
 }
