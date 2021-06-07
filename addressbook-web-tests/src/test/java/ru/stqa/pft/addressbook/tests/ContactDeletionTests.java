@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
+import java.io.File;
 import java.util.List;
 import java.util.Set;
 
@@ -15,10 +16,12 @@ public class ContactDeletionTests extends TestBase{
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.goTo().homePage();
-    if (! app.contact().isThereAContact()) {
-      ContactData contactPrecondition = new ContactData().withFirstname("test1").withLastname("test2").withNickname("test3").withHomePhone("8-900-999-0000")
-              .withAddress("Test addres").withCompany("Test Company").withEmail("test@test.ru").withGroup("test1");
+
+    if (app.db().contacts().size() == 0) {
+      app.goTo().homePage();
+      ContactData contactPrecondition = new ContactData().withFirstname("test1").withLastname("test2").withNickname("test3")
+              .withHomePhone("8-900-999-0000").withAddress("Test addres").withCompany("Test Company").withEmail("test@test.ru")
+              .withGroup("test1").withPhoto(new File("src/test/resources/stru.png"));
       app.contact().create(contactPrecondition);
     }
   }
@@ -26,18 +29,13 @@ public class ContactDeletionTests extends TestBase{
   @Test
   public void testContactDeletion() {
     app.goTo().homePage();
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     ContactData deletedContact = before.iterator().next();
-    //int index = before.size() - 1;
     app.contact().delete(deletedContact);
     app.goTo().homePage();
 
-    Contacts after = app.contact().all();
-    // Assert.assertEquals(after.size(), before.size() -1);
+    Contacts after = app.db().contacts();
     MatcherAssert.assertThat(after.size(), CoreMatchers.equalTo(before.size() - 1));
-
     MatcherAssert.assertThat(after, CoreMatchers.equalTo(before.without(deletedContact)));
-    //before.remove(deletedContact);
-    //Assert.assertEquals(before, after);
   }
 }
