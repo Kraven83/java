@@ -13,7 +13,7 @@
     <email2></email2>
     <email3></email3>
     <allemails></allemails>
-    <group>test1</group>
+    <groups>test1</groups>
     <photo>src\test\resources\stru.png</photo>
   </contact>
   <contact>
@@ -30,7 +30,7 @@
     <email2></email2>
     <email3></email3>
     <allemails></allemails>
-    <group>test1</group>
+    <groups>test1</groups>
     <photo>src\test\resources\stru.png</photo>
   </contact>
   <contact>
@@ -47,7 +47,7 @@
     <email2></email2>
     <email3></email3>
     <allemails></allemails>
-    <group>test1</group>
+    <groups>test1</groups>
     <photo>src\test\resources\stru.png</photo>
   </contact>
 </list>
