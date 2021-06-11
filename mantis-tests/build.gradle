@@ -8,10 +8,8 @@ dependencies {
     implementation 'org.testng:testng:7.4.0'
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-5'
     implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
-}
-
-test {
-    useTestNG()
+    //implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.github.alotuser:httpclients:1.7.7'
 }
 
 test {
