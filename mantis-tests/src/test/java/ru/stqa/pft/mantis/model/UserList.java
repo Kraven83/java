@@ -25,4 +25,9 @@ public class UserList extends ForwardingSet<User> {
     return delegate;
   }
 
+  public UserList without(User user) {
+    UserList userList = new UserList(this);
+    userList.remove(user);
+    return userList;
+  }
 }
