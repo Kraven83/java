@@ -38,12 +38,13 @@ public class ApplicationManager {
 
   public void init() throws IOException {
     String target = System.getProperty("target", "local");
+    //String target = System.getProperty("target", "remote");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
 
     dbHelper = new DbHelper();
 
+    System.setProperty("webdriver.gecko.driver", "C:\\Tools\\geckodriver-v0.26.0\\geckodriver.exe");
     if("".equals(properties.getProperty("selenium.server"))) {
-      System.setProperty("webdriver.gecko.driver", "C:\\Tools\\geckodriver-v0.26.0\\geckodriver.exe");
       if (browser.equals(BrowserType.FIREFOX)) {
         wd = new FirefoxDriver();
       } else if (browser.equals(BrowserType.CHROME)) {
